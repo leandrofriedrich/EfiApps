@@ -15,7 +15,9 @@ EFI_STATUS EFIAPI UefiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *Syste
 		goto exit;
 	}
 	Tegra3ConsoleOutputFixup();
-	Print(L"Fixed Display!\nEntering boot.efi...\n");
+	Print(L"Fixed Display!\nPatching tCover...\n");
+	Tegra3ConsoleInputFixup();
+	Print(L"Fixed tCover!\nEntering boot.efi...\n");
 
 	// Load efi file into memory
 	UINTN* memoryLocation = NULL;

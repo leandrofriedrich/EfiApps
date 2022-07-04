@@ -9,5 +9,6 @@
 #include <Protocol/SimpleTextIn.h>
 
 VOID Tegra3ConsoleOutputFixup(VOID);
+VOID Tegra3ConsoleInputFixup(VOID);
 EFI_STATUS LoadEfiFile(CHAR16* fileName, UINTN** memoryLocation, UINTN* fileSize);
 EFI_STATUS StartEfiFile(UINTN* memoryLocation, UINTN fileSize);
